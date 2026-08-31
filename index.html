@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080808">
+<meta name="description" content="کارت ویزیت آنلاین حامد محمدی نیکچه">
+<title>حامد محمدی نیکچه | HMN</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap');
+
+:root{
+  --bg:#070707;
+  --panel:#101010;
+  --panel2:#151515;
+  --orange:#ff6900;
+  --orange2:#ff963f;
+  --white:#f7f7f7;
+  --muted:#999;
+  --line:rgba(255,105,0,.24);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+html{scroll-behavior:smooth}
+
+body{
+  min-height:100vh;
+  font-family:"Vazirmatn",Tahoma,Arial,sans-serif;
+  color:var(--white);
+  background:
+    radial-gradient(circle at 10% 10%,rgba(255,105,0,.18),transparent 28%),
+    radial-gradient(circle at 90% 90%,rgba(255,105,0,.11),transparent 30%),
+    linear-gradient(135deg,#050505,#111,#050505);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+  overflow-x:hidden;
+}
+
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  opacity:.045;
+  background-image:
+    linear-gradient(rgba(255,255,255,.8) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.8) 1px,transparent 1px);
+  background-size:42px 42px;
+  mask-image:linear-gradient(to bottom,#000,transparent);
+}
+
+.wrapper{
+  width:min(1080px,100%);
+  position:relative;
+  z-index:1;
+}
+
+.card{
+  min-height:650px;
+  display:grid;
+  grid-template-columns:1.02fr .98fr;
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:32px;
+  background:rgba(15,15,15,.86);
+  box-shadow:
+    0 35px 110px rgba(0,0,0,.72),
+    0 0 70px rgba(255,105,0,.08);
+  backdrop-filter:blur(20px);
+}
+
+.visual{
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:650px;
+  padding:45px;
+  background:
+    linear-gradient(145deg,rgba(255,105,0,.09),transparent 55%),
+    #090909;
+  border-left:1px solid rgba(255,105,0,.12);
+}
+
+.ring{
+  position:absolute;
+  width:470px;
+  height:470px;
+  border:1px solid rgba(255,105,0,.23);
+  border-radius:50%;
+  box-shadow:
+    0 0 0 22px rgba(255,105,0,.025),
+    0 0 0 48px rgba(255,105,0,.012),
+    0 0 90px rgba(255,105,0,.09);
+}
+
+.profile{
+  position:relative;
+  z-index:2;
+  width:375px;
+  height:375px;
+  object-fit:cover;
+  border-radius:50%;
+  border:9px solid #0a0a0a;
+  outline:1px solid rgba(255,105,0,.62);
+  filter:grayscale(100%) contrast(1.08);
+  box-shadow:
+    0 0 0 12px rgba(255,105,0,.055),
+    0 30px 90px rgba(0,0,0,.85);
+}
+
+.logo{
+  position:absolute;
+  z-index:4;
+  top:30px;
+  left:30px;
+  width:100px;
+  height:100px;
+  border-radius:26px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(10,10,10,.92);
+  border:1px solid rgba(255,105,0,.46);
+  box-shadow:0 16px 45px rgba(0,0,0,.55);
+}
+
+.logo-mark{
+  position:relative;
+  font-family:Arial,sans-serif;
+  font-weight:900;
+  font-size:25px;
+  letter-spacing:-4px;
+  color:var(--white);
+}
+
+.logo-mark b{
+  color:var(--orange);
+}
+
+.logo-mark:after{
+  content:"";
+  position:absolute;
+  left:1px;
+  right:-3px;
+  bottom:-9px;
+  height:2px;
+  background:linear-gradient(90deg,var(--orange),transparent);
+}
+
+.visual-label{
+  position:absolute;
+  right:36px;
+  bottom:30px;
+  color:#5f5f5f;
+  font-family:Arial,sans-serif;
+  font-size:10px;
+  letter-spacing:2px;
+  direction:ltr;
+}
+
+.info{
+  padding:65px clamp(30px,6vw,75px);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  color:var(--orange2);
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:1.6px;
+  direction:ltr;
+  margin-bottom:20px;
+}
+
+.badge:before{
+  content:"";
+  width:32px;
+  height:2px;
+  background:var(--orange);
+  box-shadow:0 0 12px var(--orange);
+}
+
+h1{
+  font-size:clamp(36px,5vw,61px);
+  line-height:1.2;
+  font-weight:800;
+  letter-spacing:-1.7px;
+  margin-bottom:12px;
+}
+
+h1 span{color:var(--orange)}
+
+.subtitle{
+  color:var(--muted);
+  font-size:16px;
+  line-height:2;
+  margin-bottom:34px;
+}
+
+.contacts{
+  display:grid;
+  gap:11px;
+}
+
+.contact{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:13px 14px;
+  border:1px solid rgba(255,255,255,.065);
+  border-radius:15px;
+  background:rgba(255,255,255,.025);
+  text-decoration:none;
+  color:var(--white);
+  transition:.25s ease;
+}
+
+.contact:hover{
+  transform:translateX(-6px);
+  border-color:rgba(255,105,0,.48);
+  background:rgba(255,105,0,.065);
+}
+
+.icon{
+  width:44px;
+  height:44px;
+  flex:0 0 44px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:12px;
+  color:var(--orange);
+  background:rgba(255,105,0,.10);
+  border:1px solid rgba(255,105,0,.14);
+  font:bold 14px Arial,sans-serif;
+  direction:ltr;
+}
+
+.contact small{
+  display:block;
+  color:#666;
+  font:10px Arial,sans-serif;
+  letter-spacing:1px;
+  direction:ltr;
+  margin-bottom:3px;
+}
+
+.contact strong{
+  display:block;
+  font-size:13px;
+  direction:ltr;
+  unicode-bidi:plaintext;
+}
+
+.buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:11px;
+  margin-top:25px;
+}
+
+.button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:12px 21px;
+  border-radius:12px;
+  text-decoration:none;
+  font-size:13px;
+  font-weight:700;
+  transition:.25s ease;
+}
+
+.primary{
+  color:#090909;
+  background:linear-gradient(135deg,var(--orange),var(--orange2));
+  box-shadow:0 12px 30px rgba(255,105,0,.18);
+}
+
+.secondary{
+  color:#eee;
+  background:rgba(255,255,255,.035);
+  border:1px solid rgba(255,255,255,.11);
+}
+
+.button:hover{transform:translateY(-3px)}
+
+@media(max-width:800px){
+  body{padding:14px;align-items:flex-start}
+  .card{
+    grid-template-columns:1fr;
+    min-height:auto;
+    margin-top:8px;
+  }
+  .visual{
+    min-height:430px;
+    border-left:0;
+    border-bottom:1px solid rgba(255,105,0,.12);
+  }
+  .ring{width:330px;height:330px}
+  .profile{width:285px;height:285px}
+  .logo{
+    width:75px;height:75px;
+    top:20px;left:20px;
+    border-radius:20px;
+  }
+  .logo-mark{font-size:19px}
+  .info{padding:42px 24px 48px}
+  h1{font-size:37px}
+  .visual-label{right:22px;bottom:20px}
+}
+
+@media(max-width:390px){
+  .visual{min-height:360px}
+  .ring{width:275px;height:275px}
+  .profile{width:235px;height:235px}
+  h1{font-size:32px}
+  .contact strong{font-size:11px}
+}
+</style>
+</head>
+
+<body>
+<div class="wrapper">
+  <main class="card">
+
+    <section class="visual">
+      <div class="ring"></div>
+
+      <div class="logo" aria-label="HMN Logo">
+        <div class="logo-mark">
+          H<span>M</span>N
+        </div>
+      </div>
+
+      <img
+        class="profile"
+        src="profile.png"
+        alt="حامد محمدی نیکچه"
+      >
+
+      <div class="visual-label">HMN / PERSONAL CARD</div>
+    </section>
+
+    <section class="info">
+
+      <div class="badge">PERSONAL DIGITAL CARD</div>
+
+      <h1>
+        حامد محمدی
+        <span>نیکچه</span>
+      </h1>
+
+      <p class="subtitle">
+        کارت ویزیت آنلاین شخصی
+      </p>
+
+      <div class="contacts">
+
+        <a
+          class="contact"
+          href="mailto:hamedmohammadinikche@gmail.com"
+        >
+          <div class="icon">@</div>
+          <div>
+            <small>EMAIL</small>
+            <strong>hamedmohammadinikche@gmail.com</strong>
+          </div>
+        </a>
+
+        <a
+          class="contact"
+          href="https://t.me/hamedsurush"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="icon">TG</div>
+          <div>
+            <small>TELEGRAM</small>
+            <strong>@hamedsurush</strong>
+          </div>
+        </a>
+
+        <a
+          class="contact"
+          href="tel:+989355018071"
+        >
+          <div class="icon">TEL</div>
+          <div>
+            <small>PHONE</small>
+            <strong>09355018071</strong>
+          </div>
+        </a>
+
+      </div>
+
+      <div class="buttons">
+        <a
+          class="button primary"
+          href="mailto:hamedmohammadinikche@gmail.com"
+        >
+          ارسال ایمیل
+        </a>
+
+        <a
+          class="button secondary"
+          href="https://t.me/hamedsurush"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          تلگرام
+        </a>
+      </div>
+
+    </section>
+
+  </main>
+</div>
+</body>
+</html>
