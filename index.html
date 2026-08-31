@@ -195,7 +195,7 @@ function create() {
   // ---------- MATRIX ----------
   const canvas = document.getElementById('matrixCanvas');
   const ctx = canvas.getContext('2d');
-  let drops = [], fontSize = 16, columns = 0;
+  let drops = [], fontSize = 18, columns = 0;
   const matrixChars = '01アhmnオカキHMNクHMN<>/{}[]$#@';
 
   function resizeMatrix() {
@@ -218,7 +218,7 @@ function create() {
       drops.forEach((y, i) => {
         ctx.fillStyle = Math.random() > .965 ? 'rgba(255,255,255,.9)' : 'rgba(255,106,0,.62)';
         ctx.fillText(matrixChars[(Math.random() * matrixChars.length) | 0], i * fontSize, y * fontSize);
-        if (y * fontSize > innerHeight && Math.random() > .975) drops[i] = Math.random() * -20;
+        if (y * fontSize > innerHeight && Math.random() > .975) drops[i] = Math.random() * -22;
         drops[i] += .55;
       });
     }
