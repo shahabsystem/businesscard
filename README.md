@@ -1,4 +1,8 @@
-# HMN Personal Business Card
+# HMN Professional Digital Business Card
 
-کارت ویزیت آنلاین حامد محمدی نیکچه.
-ی branch اصلی و پوشه root فعال کنید.
+فایل‌های سایت:
+- index.html
+- profile.png
+- hmn-logo.svg
+
+برای GitHub Pages، هر سه فایل را در ریشه Repository قرار دهید و Pages را روی branch اصلی و `/root` فعال کنید.
